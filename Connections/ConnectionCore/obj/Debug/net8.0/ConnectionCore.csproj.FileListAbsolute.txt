@@ -1,0 +1,15 @@
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net8.0\ConnectionCore.exe
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net8.0\ConnectionCore.deps.json
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net8.0\ConnectionCore.runtimeconfig.json
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net8.0\ConnectionCore.dll
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net8.0\ConnectionCore.pdb
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.AssemblyInfoInputs.cache
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.AssemblyInfo.cs
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.csproj.CoreCompileInputs.cache
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.sourcelink.json
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.dll
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\refint\ConnectionCore.dll
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.pdb
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ConnectionCore.genruntimeconfig.cache
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net8.0\ref\ConnectionCore.dll
