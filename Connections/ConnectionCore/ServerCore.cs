@@ -41,49 +41,39 @@ namespace ConnectionCore
             //below i only want one client to connect to the server , adding a while(true) loop
             //later to handle multiple ones
 
+            
+
              TcpClient client = await _tcpListener.AcceptTcpClientAsync();
 
-                 // Explanation of why an asynchronous approach is vi:
- // The AcceptTcpClientAsync() method is asynchronous, meaning it does not block the main thread
- // while waiting for a client to connect. In contrast, the synchronous AcceptTcpClient() method
- // would block the thread indefinitely until a client connects.
+                // Explanation of why an asynchronous approach is vi:
+                // The AcceptTcpClientAsync() method is asynchronous, meaning it does not block the main thread
+                // while waiting for a client to connect. In contrast, the synchronous AcceptTcpClient() method
+                // would block the thread indefinitely until a client connects.
 
- // By using await, the execution is paused at this point, allowing the thread to return to 
-// the caller to handle other tasks (like initializing the client). When a client sends 
- // a connection request, the method resumes execution on the same thread, successfully 
-// accepting the client connection. This approach improves responsiveness and avoids 
-// potential deadlocks in scenarios where the client and server are dependent on each other 
-// to proceed with their tasks.
+                // By using await, the execution is paused at this point, allowing the thread to return to 
+                // the caller to handle other tasks (like initializing the client). When a client sends 
+                // a connection request, the method resumes execution on the same thread, successfully 
+                // accepting the client connection. This approach improves responsiveness and avoids 
+                // potential deadlocks in scenarios where the client and server are dependent on each other 
+                // to proceed with their tasks.
 
-// In essence, AcceptTcpClientAsync() allows the server to handle the connection in a 
- // non-blocking way, ensuring that both the server and client can operate concurrently
-// without being stuck waiting for each other.
-
-
+                // In essence, AcceptTcpClientAsync() allows the server to handle the connection in a 
+                // non-blocking way, ensuring that both the server and client can operate concurrently
+                // without being stuck waiting for each other.
 
 
+               
 
-            var stream = client.GetStream();
+                 _= Task.Run( () => HandleClientAsync(client) ); // runs on a seperate
+                                                                //thread
 
-            int ReadChar;
+               
 
-            while( ( ReadChar =  stream.Read(buffer,0,buffer.Length) ) != 0 )
-            {
-                    //If the server handles multiple clients at the same time,
-                    //ReadAsync allows the I/O operations to be non-blocking,
-                    //freeing up the thread to serve other clients or tasks.
 
-                    string Message = Encoding.UTF8.GetString(buffer, 0, ReadChar);
 
-                    
 
-                    Console.WriteLine($"Client said {Message}");
             }
-
-
-
-
-            }catch(Exception ex)
+            catch(Exception ex)
             {
 
                 Console.WriteLine($"Error: {ex.Message}");
@@ -95,48 +85,46 @@ namespace ConnectionCore
 
         }
 
-
-        private void ServerStart()
+        private async Task HandleClientAsync(TcpClient client)
         {
+            var stream = client.GetStream();
+            byte[] buffer = new byte[256];
 
-            IPAddress adrIP = IPAddress.Parse("127.0.0.1");
-            var Port = 13000;
-            _tcpListener = new(adrIP, Port);
-            _tcpListener.Start();
+            while (true)
+            {
+                int readBytes = await stream.ReadAsync(buffer, 0, buffer.Length);
 
-            Console.WriteLine("Server Started");
+                if (readBytes == 0)
+                {
+                    // Client disconnected
+                    Console.WriteLine("(server): Client disconnected.");
+                    break;
+                }
 
-            buffer = new byte[256];
+                string message = Encoding.UTF8.GetString(buffer, 0, readBytes);
+                Console.WriteLine($"(server): Client said {message}");
 
-            using TcpClient _tcpClient = _tcpListener.AcceptTcpClient();
-
-            Console.WriteLine("Client Connected");
-
-            var clientStream = _tcpClient.GetStream();
-
-            int totalReadCharFromStream;
-
-            while (( totalReadCharFromStream = clientStream.Read(buffer,0,buffer.Length)) != 0 ){
-
-
-                var IncomingMessage=Encoding.UTF8.GetString(buffer, 0, totalReadCharFromStream);
-
-                Console.WriteLine(IncomingMessage);
-
-
-
+                await GenerateResponseAsync(client);
             }
 
-            
-
-
-
-
-
-
-
+            client.Close(); // Clean up when the client disconnects
         }
-    
+
+        private  async Task GenerateResponseAsync(TcpClient client)
+        {
+
+            var stream = client.GetStream();
+
+            string responseMsg = "This is the server's response";
+
+            var responseByte = Encoding.UTF8.GetBytes(responseMsg);
+
+           await stream.WriteAsync(responseByte,0,responseByte.Length);
+           await stream.FlushAsync();
+
+
+
+        }    
 
 
 

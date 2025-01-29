@@ -22,14 +22,15 @@ namespace ConnectionCore
 
 
         }
-
+        
         private async void ConnectToServer(string IpAdress,int Port)
         {
 
             try
             {
 
-              _tcpClient = new();
+
+                _tcpClient = new();
 
                await _tcpClient.ConnectAsync(IpAdress, Port);
 
@@ -51,11 +52,17 @@ namespace ConnectionCore
                     }
 
 
-                    SendMessage(message);
+                    await SendMessageAsync(message);
+
+                    await RecieveResponseAsync();
+
+
+
 
                 }
 
                 _tcpClient.Close();
+
 
                 Console.WriteLine("(client) : Connection Terminated by the Client");
 
@@ -74,15 +81,34 @@ namespace ConnectionCore
 
         }
 
-        private void SendMessage(string message) {
+        private async Task SendMessageAsync(string message) {
+
+           
 
             messageByte = Encoding.UTF8.GetBytes(message, 0, message.Length);
 
-            _tcpClient.GetStream().Write(messageByte, 0, messageByte.Length); // write 
-            
-        
-        
-        
+            var stream = _tcpClient.GetStream();
+
+            await stream.WriteAsync(messageByte, 0, messageByte.Length); // write 
+
+            await stream.FlushAsync();
+           
+        }
+
+        private async Task RecieveResponseAsync()
+        {
+
+            var stream = _tcpClient.GetStream();
+            byte[] messageBytes = new byte[256];
+
+            int readBytes = await stream.ReadAsync(messageBytes, 0, messageBytes.Length);
+
+            if (readBytes > 0)
+            {
+                string response = Encoding.UTF8.GetString(messageBytes, 0, readBytes);
+                Console.WriteLine($"(client): Server responded with: {response}");
+            }
+
         }
 
 
