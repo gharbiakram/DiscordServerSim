@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\oussama\\onedrive\\bureau\\projects\\discordserversim\\discordserversimui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\oussama\\onedrive\\bureau\\projects\\discordserversim\\discordserversimui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\oussama\\onedrive\\bureau\\projects\\discordserversim\\discordserversimui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\oussama\\onedrive\\bureau\\projects\\discordserversim\\discordserversimui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +30,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T20:34:52.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -38,13 +55,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAADwvzEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T16:52:46.188Z",
               "EditorCaption": ""

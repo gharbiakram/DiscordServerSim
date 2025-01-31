@@ -18,6 +18,33 @@
 
         </Grid.ColumnDefinitions>
 
+        <Grid Grid.Column="0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="80*"/>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+
+                <Border BorderThickness="1" Padding="5" Background="DodgerBlue">
+
+                    <TextBlock  Text="DiscordServerSim" Foreground="White" FontSize="15" VerticalAlignment="Center" FontFamily="Oswald"/> 
+
+
+                </Border>
+                
+                
+                
+            </Grid>
+            
+            
+        </Grid>
+
         
         <Grid Grid.Column="1">
 
@@ -30,12 +57,23 @@
 
             <Grid Grid.Row="2" Margin="10">
                 
-            <Button Name="sendingButton" Content="Send" FontSize="15" FontWeight="Regular" Height="30" Width="50" Background="DodgerBlue" HorizontalAlignment="Right"  ></Button>
-                <TextBox  Text="Hey" Height="25" Width="450" HorizontalAlignment="Left" BorderThickness="2" Background="White" Foreground="Black"   />
+            <Button Name="SendingButton" Content="Send" FontSize="15" FontWeight="Regular" Height="30" Width="50" Background="DodgerBlue" Foreground="White" HorizontalAlignment="Right" Click="SendingButton_Click"  ></Button>
+            <TextBox Name="MessageBox"  Height="25" Width="450" HorizontalAlignment="Left" BorderThickness="2" Background="White" Foreground="Black" KeyDown="MessageBox_KeyDown"   />
                 
             </Grid>
-            
-            
+
+            <ListBox x:Name="MessageList" Grid.Row="0" Background="GhostWhite">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" Padding="5" Margin="5" Background="DodgerBlue"  CornerRadius="5">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Sender.Username}" FontWeight="Bold" Foreground="White"/>
+                                <TextBlock Text="{Binding messageText}" TextWrapping="Wrap" Foreground="White"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
        
         
