@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
+using ConnectionCore;
 
 namespace DiscordServerSimUI
 {
@@ -9,6 +10,10 @@ namespace DiscordServerSimUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        
+
+
         //notifies the UI when changes occur , so it will be updatable
         ObservableCollection<Message> Messages { get; set; } = new();
 

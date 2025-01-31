@@ -19,3 +19,10 @@ C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\ob
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.pdb
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.genruntimeconfig.cache
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\ref\DiscordServerSimUI.dll
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\ConnectionCore.deps.json
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\ConnectionCore.runtimeconfig.json
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\ConnectionCore.exe
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\ConnectionCore.dll
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\ConnectionCore.pdb
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.csproj.AssemblyReference.cache
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordS.0EF793B3.Up2Date

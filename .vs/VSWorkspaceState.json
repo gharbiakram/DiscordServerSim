@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Server",
-    "\\Server\\Server"
+    "\\Connections",
+    "\\Connections\\ConnectionCore"
   ],
-  "SelectedNode": "\\Server\\Server\\Program.cs",
+  "SelectedNode": "\\DiscordServerSimUI",
   "PreviewInSolutionExplorer": false
 }
