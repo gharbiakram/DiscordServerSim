@@ -6,16 +6,11 @@
         {
           
 
-            new ServerCore();
+            new ServerCore(); // this program will run independatly of the UI app
 
            
 
-            new ClientCore();
-
-
-           
-
-            await Task.Delay(-1); // keep it alive
+       
 
 
             

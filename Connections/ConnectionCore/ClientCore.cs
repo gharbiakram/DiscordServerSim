@@ -32,34 +32,11 @@ namespace ConnectionCore
 
                 _tcpClient = new();
 
-               await _tcpClient.ConnectAsync(IpAdress, Port);
+                await _tcpClient.ConnectAsync(IpAdress, Port);
 
                 Console.WriteLine("(client) : Client Connected SuccesFully");
 
-                while (true)
-                {
-                   
-                    Console.WriteLine("(client) : Enter The Message to send");
-
-                    string message = Console.ReadLine();
-
-                    if(message == "exit") { 
-                        
-
-                        
-                        break; 
-                    
-                    }
-
-
-                    await SendMessageAsync(message);
-
-                    await RecieveResponseAsync();
-
-
-
-
-                }
+      
 
                 _tcpClient.Close();
 
@@ -81,21 +58,40 @@ namespace ConnectionCore
 
         }
 
-        private async Task SendMessageAsync(string message) {
+        public async Task<bool> SendMessageAsync(string message) {
 
-           
+            try {
 
-            messageByte = Encoding.UTF8.GetBytes(message, 0, message.Length);
+                if (!_tcpClient.Connected) { return false; }
 
-            var stream = _tcpClient.GetStream();
+                messageByte = Encoding.UTF8.GetBytes(message, 0, message.Length);
 
-            await stream.WriteAsync(messageByte, 0, messageByte.Length); // write 
+                var stream = _tcpClient.GetStream();
 
-            await stream.FlushAsync();
+                await stream.WriteAsync(messageByte, 0, messageByte.Length); // write on stream
+
+                await stream.FlushAsync();
+
+
+                
+
+                return true;
+                
+
+            }
+            catch(Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+
+                return false; 
+            }
+
+            
            
         }
 
-        private async Task RecieveResponseAsync()
+        public async Task RecieveResponseAsync()
         {
 
             var stream = _tcpClient.GetStream();

@@ -22,11 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -38,8 +42,7 @@
               "RelativeToolTip": "ClientCore.cs",
               "ViewState": "AgIAAFsAAAAAAAAAAAAmwCcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T19:06:47.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T19:06:47.03Z"
             },
             {
               "$type": "Document",
@@ -49,7 +52,7 @@
               "RelativeDocumentMoniker": "ServerCore.cs",
               "ToolTip": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ServerCore.cs",
               "RelativeToolTip": "ServerCore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T15:57:24.374Z",
               "EditorCaption": ""
@@ -64,8 +67,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAzwAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T15:56:05.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T15:56:05.862Z"
             }
           ]
         }

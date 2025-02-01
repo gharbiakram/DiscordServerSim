@@ -3,11 +3,9 @@ C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bi
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\DiscordServerSimUI.runtimeconfig.json
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\DiscordServerSimUI.dll
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\DiscordServerSimUI.pdb
-C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI_MarkupCompile.cache
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI_MarkupCompile.lref
-C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.g.resources
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.AssemblyInfoInputs.cache
@@ -26,3 +24,7 @@ C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bi
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\bin\Debug\net8.0-windows\ConnectionCore.pdb
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordServerSimUI.csproj.AssemblyReference.cache
 C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\DiscordS.0EF793B3.Up2Date
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\Views\LoginView\LoginScreen.g.cs
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\Views\ServerView\MainWindow.g.cs
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\Views\LoginView\LoginScreen.baml
+C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\Views\ServerView\MainWindow.baml

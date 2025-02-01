@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -15,6 +17,8 @@ namespace ConnectionCore
         private TcpListener _tcpListener;
 
         private byte[] buffer;
+
+        private ConcurrentBag<TcpClient> connectedClients = new();
 
         public ServerCore()
         {
@@ -38,12 +42,22 @@ namespace ConnectionCore
 
             buffer = new byte[256];
 
-            //below i only want one client to connect to the server , adding a while(true) loop
-            //later to handle multiple ones
+                //below i only want one client to connect to the server , adding a while(true) loop
+                //later to handle multiple ones
 
+                while (true)
+                {
+
+                    using TcpClient client = await _tcpListener.AcceptTcpClientAsync();
+
+                    connectedClients.Add(client);
+
+                    await BroadCastMessageAsync(client, await HandleClientAsync(client));
+
+
+                }
             
 
-             TcpClient client = await _tcpListener.AcceptTcpClientAsync();
 
                 // Explanation of why an asynchronous approach is vi:
                 // The AcceptTcpClientAsync() method is asynchronous, meaning it does not block the main thread
@@ -64,8 +78,7 @@ namespace ConnectionCore
 
                
 
-                 _= Task.Run( () => HandleClientAsync(client) ); // runs on a seperate
-                                                                //thread
+                
 
                
 
@@ -85,47 +98,93 @@ namespace ConnectionCore
 
         }
 
-        private async Task HandleClientAsync(TcpClient client)
+        private async Task<string?> HandleClientAsync(TcpClient client)
         {
             var stream = client.GetStream();
             byte[] buffer = new byte[256];
 
-            while (true)
-            {
+            
                 int readBytes = await stream.ReadAsync(buffer, 0, buffer.Length);
 
                 if (readBytes == 0)
                 {
                     // Client disconnected
                     Console.WriteLine("(server): Client disconnected.");
-                    break;
+
+                    return null;
+                    
                 }
 
                 string message = Encoding.UTF8.GetString(buffer, 0, readBytes);
-                Console.WriteLine($"(server): Client said {message}");
 
-                await GenerateResponseAsync(client);
-            }
 
-            client.Close(); // Clean up when the client disconnects
+               return message;
+            
+
+             
         }
 
-        private  async Task GenerateResponseAsync(TcpClient client)
+        private async Task BroadCastMessageAsync(TcpClient client,string? Message)
         {
 
-            var stream = client.GetStream();
+            try { 
+            
+                if(Message == null)
+                {
 
-            string responseMsg = "This is the server's response";
+                    throw new IOException("Can't BroadCast a NULL value");
 
-            var responseByte = Encoding.UTF8.GetBytes(responseMsg);
 
-           await stream.WriteAsync(responseByte,0,responseByte.Length);
-           await stream.FlushAsync();
+                }
+            
+            
+                var stream = client.GetStream();
+
+               
+
+                foreach( TcpClient c in connectedClients)
+                {
+
+                    if(c != client)
+                    {
+
+
+                        var responseByte = Encoding.UTF8.GetBytes(Message);
+
+                        await stream.WriteAsync(responseByte,0,responseByte.Length);
+
+                        await stream.FlushAsync();
+
+
+
+                    }
+
+                }
+
+            } 
+            catch (Exception ex) 
+            {
+
+                Console.WriteLine(ex.Message);
+            
+            }
+
 
 
 
         }    
+        private void InsertIntoDB()
+        {
 
+
+
+
+
+
+
+
+
+        }
 
 
 
