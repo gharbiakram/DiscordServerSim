@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Connections",
-    "\\Connections\\ConnectionCore"
+    "\\Connections\\ConnectionCore",
+    "\\DiscordServerSimUI",
+    "\\DiscordServerSimUI\\Views",
+    "\\DiscordServerSimUI\\Views\\LoginView",
+    "\\DiscordServerSimUI\\Views\\ServerView"
   ],
-  "SelectedNode": "\\DiscordServerSimUI",
+  "SelectedNode": "\\Connections\\ConnectionCore\\ServerCore.cs",
   "PreviewInSolutionExplorer": false
 }

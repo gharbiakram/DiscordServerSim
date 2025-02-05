@@ -18,7 +18,7 @@ namespace ConnectionCore
 
         private byte[] buffer;
 
-        private ConcurrentBag<TcpClient> connectedClients = new();
+        private ConcurrentDictionary<TcpClient,DateTime> connectedClients = new();
 
         public ServerCore()
         {
@@ -48,11 +48,11 @@ namespace ConnectionCore
                 while (true)
                 {
 
-                    using TcpClient client = await _tcpListener.AcceptTcpClientAsync();
+                     TcpClient client = await _tcpListener.AcceptTcpClientAsync();
 
-                    connectedClients.Add(client);
+                    connectedClients[client] = DateTime.UtcNow;
 
-                    await BroadCastMessageAsync(client, await HandleClientAsync(client));
+                   _ =Task.Run( ()=>   HandleClientAsync(client) );
 
 
                 }
@@ -91,6 +91,8 @@ namespace ConnectionCore
 
                 Console.WriteLine($"Error: {ex.Message}");
 
+                
+
             } 
 
 
@@ -98,33 +100,79 @@ namespace ConnectionCore
 
         }
 
-        private async Task<string?> HandleClientAsync(TcpClient client)
+        private async Task HandleClientAsync(TcpClient client)
         {
             var stream = client.GetStream();
             byte[] buffer = new byte[256];
+            try
+            {
 
-            
-                int readBytes = await stream.ReadAsync(buffer, 0, buffer.Length);
 
-                if (readBytes == 0)
+
+
+
+
+                while (client.Connected)
                 {
-                    // Client disconnected
-                    Console.WriteLine("(server): Client disconnected.");
 
-                    return null;
+
+                    int readBytes = await stream.ReadAsync(buffer, 0, buffer.Length);
+
+                    if (readBytes == 0)
+                    {
+
+
+                        break;
                     
+                    
+                    }
+
+
+                    string message = Encoding.UTF8.GetString(buffer, 0, readBytes);
+
+
+
+                    await BroadCastMessageAsync(client, message);
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                Console.WriteLine(ex.ToString());
+            }
+            finally { 
+            
+                if( client.Connected == false)
+                {
+
+                    connectedClients.Remove(client , out _);
+
+                    client.Close();
+
+
                 }
 
-                string message = Encoding.UTF8.GetString(buffer, 0, readBytes);
 
-
-               return message;
             
-
-             
+            
+            }
         }
 
-        private async Task BroadCastMessageAsync(TcpClient client,string? Message)
+
+
+
+
+
+
+
+
+
+
+
+        private async Task BroadCastMessageAsync(TcpClient sender,string? Message)
         {
 
             try { 
@@ -138,18 +186,18 @@ namespace ConnectionCore
                 }
             
             
-                var stream = client.GetStream();
-
                
+                var responseByte = Encoding.UTF8.GetBytes(Message);
 
-                foreach( TcpClient c in connectedClients)
+
+                foreach ( TcpClient c in connectedClients.Keys)
                 {
 
-                    if(c != client)
+                    if(c != sender)
                     {
 
 
-                        var responseByte = Encoding.UTF8.GetBytes(Message);
+                        var stream = c.GetStream();
 
                         await stream.WriteAsync(responseByte,0,responseByte.Length);
 
@@ -179,7 +227,7 @@ namespace ConnectionCore
 
 
 
-
+            //DB
 
 
 

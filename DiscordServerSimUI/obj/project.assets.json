@@ -27,23 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\oussama\\.nuget\\packages\\": {},
+    "C:\\Users\\akram\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\DiscordServerSimUI.csproj",
+      "projectUniqueName": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\DiscordServerSimUI.csproj",
       "projectName": "DiscordServerSimUI",
-      "projectPath": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\DiscordServerSimUI.csproj",
-      "packagesPath": "C:\\Users\\oussama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\DiscordServerSimUI\\obj\\",
+      "projectPath": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\DiscordServerSimUI.csproj",
+      "packagesPath": "C:\\Users\\akram\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\oussama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\akram\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -58,8 +58,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj": {
-              "projectPath": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj"
+            "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj": {
+              "projectPath": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj"
             }
           }
         }

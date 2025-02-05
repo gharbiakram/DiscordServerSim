@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\
+C:\Users\akram\Desktop\Projects\DiscordServerSim\DiscordServerSimUI\obj\Debug\net8.0-windows\
 DiscordServerSimUI
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\oussama\OneDrive\Bureau\Projects\DiscordServerSim\DiscordServerSimUI\App.xaml
+C:\Users\akram\Desktop\Projects\DiscordServerSim\DiscordServerSimUI\App.xaml
 2-403471903
 
 71783179927
-199-1776809038
+199-525854343
 Views\LoginView\LoginScreen.xaml;Views\ServerView\MainWindow.xaml;
 
-True
+False
 

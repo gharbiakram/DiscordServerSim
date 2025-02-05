@@ -64,7 +64,7 @@ namespace DiscordServerSimUI.Views.ServerView
                // Messages.Add(new Message { messageText = MessageBox.Text, Sender = new User("Akram") });
 
 
-
+                
                 
                 
                 
@@ -99,6 +99,29 @@ namespace DiscordServerSimUI.Views.ServerView
             }
 
 
+
+
+
+        }
+
+
+        private void RecieveMessage() { 
+        
+        
+        
+                //receive broadcasted message
+        
+        
+        
+        
+        
+        }
+
+        private void UpdateUI()
+        {
+
+
+            // upon recieving the message , change the UI (add it to the message list)
 
 
 

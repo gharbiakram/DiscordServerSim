@@ -53,7 +53,7 @@ namespace DiscordServerSimUI.Views.LoginView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DiscordServerSimUI;component/views/loginview/loginscreen.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DiscordServerSimUI;V1.0.0.0;component/views/loginview/loginscreen.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\LoginView\LoginScreen.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

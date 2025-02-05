@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\oussama\\.nuget\\packages\\": {},
+    "C:\\Users\\akram\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj",
+      "projectUniqueName": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj",
       "projectName": "ConnectionCore",
-      "projectPath": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj",
-      "packagesPath": "C:\\Users\\oussama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oussama\\OneDrive\\Bureau\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\obj\\",
+      "projectPath": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ConnectionCore.csproj",
+      "packagesPath": "C:\\Users\\akram\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\oussama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\akram\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

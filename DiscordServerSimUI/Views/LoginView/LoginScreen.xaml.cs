@@ -23,5 +23,12 @@ namespace DiscordServerSimUI.Views.LoginView
         {
             InitializeComponent();
         }
+
+        private void LoginConfirm(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //make connecting subject to login
     }
 }

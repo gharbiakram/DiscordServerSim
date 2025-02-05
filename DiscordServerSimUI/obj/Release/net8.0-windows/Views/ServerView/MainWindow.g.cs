@@ -77,7 +77,7 @@ namespace DiscordServerSimUI.Views.ServerView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DiscordServerSimUI;V1.0.0.0;component/views/serverview/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DiscordServerSimUI;component/views/serverview/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ServerView\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
