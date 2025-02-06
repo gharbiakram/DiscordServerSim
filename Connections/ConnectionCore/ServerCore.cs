@@ -18,7 +18,7 @@ namespace ConnectionCore
 
         private byte[] buffer;
 
-        private ConcurrentDictionary<TcpClient,DateTime> connectedClients = new();
+        private ConcurrentDictionary<TcpClient,string> connectedClients = new();
 
         public ServerCore()
         {
@@ -52,7 +52,8 @@ namespace ConnectionCore
 
                     Console.WriteLine("CLient Connected");
 
-                    connectedClients[client] = DateTime.UtcNow;
+                    connectedClients.TryAdd(client,"");
+                    
 
                    _ =Task.Run( ()=>   HandleClientAsync(client) );
 
@@ -106,6 +107,10 @@ namespace ConnectionCore
         {
             var stream = client.GetStream();
             byte[] buffer = new byte[256];
+
+
+
+
             try
             {
 
@@ -131,6 +136,13 @@ namespace ConnectionCore
 
 
                     string message = Encoding.UTF8.GetString(buffer, 0, readBytes);
+
+                    var splitMessage = message.Split(": ", 2);
+
+                    string senderName = splitMessage.Length > 1 ? splitMessage[0] : "Unknown";
+                    string messageText = splitMessage.Length > 1 ? splitMessage[1] : message;
+
+                    connectedClients[client] = senderName;
 
 
                     Console.WriteLine(message);

@@ -30,5 +30,7 @@ namespace DiscordServerSimUI.Views.LoginView
         }
 
         //make connecting subject to login
+        //tbd after adding a database
+
     }
 }

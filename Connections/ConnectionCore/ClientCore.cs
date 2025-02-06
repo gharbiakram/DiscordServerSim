@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -13,9 +14,12 @@ namespace ConnectionCore
       private TcpClient _tcpClient;
 
         private byte[] messageByte;
-        public  ClientCore()
+
+        string _name;
+        public  ClientCore(string name)
         {
 
+            _name = name;
 
              ConnectToServer("127.0.0.1", 13000);
 
@@ -34,14 +38,19 @@ namespace ConnectionCore
 
                 await _tcpClient.ConnectAsync(IpAdress, Port);
 
-                Console.WriteLine("(client) : Client Connected SuccesFully");
+                Console.WriteLine($"({_name}) : Client Connected SuccesFully");
 
-      
+                var stream = _tcpClient.GetStream();
 
-                
+                byte[] nameData = Encoding.UTF8.GetBytes(_name + "\n");
+                await stream.WriteAsync(nameData, 0, nameData.Length);
+                await stream.FlushAsync();
 
 
-            }catch(Exception e)
+
+
+            }
+            catch(Exception e)
             {
                 Console.WriteLine(e.Message);
 
@@ -64,7 +73,9 @@ namespace ConnectionCore
                 Console
                     .WriteLine("Sending The Message To the server");
 
-                messageByte = Encoding.UTF8.GetBytes(message, 0, message.Length);
+                string formattedMessage = $"{_name} : {message}";
+
+                messageByte = Encoding.UTF8.GetBytes(formattedMessage, 0, formattedMessage.Length);
 
                 var stream = _tcpClient.GetStream();
 
@@ -102,7 +113,7 @@ namespace ConnectionCore
             if (readBytes > 0)
             {
                 string response = Encoding.UTF8.GetString(messageBytes, 0, readBytes);
-                Console.WriteLine($"(client): Server responded with: {response}");
+                Console.WriteLine($"({_name}): Server responded with: {response}");
 
                 return response;
             }

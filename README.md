@@ -2,6 +2,9 @@
 
 An App that simulates the functionalites of a Discord Server
 
+The initial app is done offically , please refer to Usage.md To learn how to use the app succesfully.
+
+
 (1)"DiscordServerSimUI": contains the UI code (using WPF)
 -it refrences the ConnectionCore solution , gaining access to the server and client logic.
 -it won't be able to connect to the server directly , it must use a client to do so.
@@ -14,3 +17,5 @@ NOTE: the design is still in an early version , scaling it or changing the entir
 -the server will be the only one with access to manipulate data from the DataBase , adding Security
 NOTE:The Logic and performance of the server/clients relationship is not performance focused to solve that :
 -i plan to start using web sockets (after the initial app is done).
+
+

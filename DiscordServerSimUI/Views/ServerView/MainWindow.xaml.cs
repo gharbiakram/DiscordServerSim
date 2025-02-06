@@ -25,7 +25,7 @@ namespace DiscordServerSimUI.Views.ServerView
             username  = Microsoft.VisualBasic.Interaction.InputBox("Enter your username:", "Username", username);
             user = new(username);
 
-            client = new ClientCore();
+            client = new ClientCore(username);
 
 
 
@@ -131,8 +131,13 @@ namespace DiscordServerSimUI.Views.ServerView
 
                 var recievedMessage = await client.RecieveResponseAsync();
 
+                var splitMessage = recievedMessage.Split(": ", 2);
 
-                Messages.Add(new Message { Sender = user , messageText = recievedMessage });
+                string senderName = splitMessage.Length > 1 ? splitMessage[0] : "Unknown";
+                string messageText = splitMessage.Length > 1 ? splitMessage[1] : recievedMessage;
+
+
+                Messages.Add(new Message { Sender = new User(senderName) , messageText = messageText });
   
             
             
