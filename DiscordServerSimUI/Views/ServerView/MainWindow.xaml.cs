@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 using ConnectionCore;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DiscordServerSimUI.Views.ServerView
 {
@@ -14,18 +15,26 @@ namespace DiscordServerSimUI.Views.ServerView
 
         ClientCore client ;
 
+        User user ;
+
+        string username;
         //notifies the UI when changes occur , so it will be updatable
         ObservableCollection<Message> Messages { get; set; } = new();
-
         public MainWindow()
         {
-
+            username  = Microsoft.VisualBasic.Interaction.InputBox("Enter your username:", "Username", username);
+            user = new(username);
 
             client = new ClientCore();
+
+
 
             InitializeComponent();
             //link the Message List component with the message collection
             MessageList.ItemsSource = Messages;
+
+            RecieveMessageAsync();
+
         }
 
         private void MessageBox_KeyDown(object sender, KeyEventArgs e)
@@ -63,7 +72,7 @@ namespace DiscordServerSimUI.Views.ServerView
                         // Ensure UI updates are on the main thread (if applicable)
                         App.Current.Dispatcher.Invoke(() =>
                         {
-                            Messages.Add(new Message { Sender = new User("User"), messageText = sentMessage });
+                            Messages.Add(new Message { Sender = user, messageText = sentMessage });
                         });
                     }
                 });
@@ -115,11 +124,22 @@ namespace DiscordServerSimUI.Views.ServerView
         }
 
 
-        private void RecieveMessage() { 
+        private async void RecieveMessageAsync() {
+
+            while (true)
+            {
+
+                var recievedMessage = await client.RecieveResponseAsync();
+
+
+                Messages.Add(new Message { Sender = user , messageText = recievedMessage });
+  
+            
+            
+            
+            }
         
-        
-        
-                //receive broadcasted message
+                
         
         
         

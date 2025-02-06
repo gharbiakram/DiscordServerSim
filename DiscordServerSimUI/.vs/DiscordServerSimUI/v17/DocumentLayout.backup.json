@@ -3,14 +3,17 @@
   "WorkspaceRootPath": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66F51D5F-C0BD-448F-AAC3-9AC7CBE30BFC}|..\\Connections\\ConnectionCore\\ConnectionCore.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\connections\\connectioncore\\clientcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\discordserversimui\\views\\serverview\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|solutionrelative:views\\serverview\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{66F51D5F-C0BD-448F-AAC3-9AC7CBE30BFC}|..\\Connections\\ConnectionCore\\ConnectionCore.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\connections\\connectioncore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66F51D5F-C0BD-448F-AAC3-9AC7CBE30BFC}|..\\Connections\\ConnectionCore\\ConnectionCore.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\connections\\connectioncore\\servercore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F51D5F-C0BD-448F-AAC3-9AC7CBE30BFC}|..\\Connections\\ConnectionCore\\ConnectionCore.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\connections\\connectioncore\\clientcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\discordserversimui\\discordserversimui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -19,9 +22,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\discordserversimui\\views\\loginview\\loginscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|solutionrelative:views\\loginview\\loginscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F51D5F-C0BD-448F-AAC3-9AC7CBE30BFC}|..\\Connections\\ConnectionCore\\ConnectionCore.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\connections\\connectioncore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17B818C5-6198-407F-B9E2-5A67FBC17BF8}|DiscordServerSimUI.csproj|c:\\users\\akram\\desktop\\projects\\discordserversim\\discordserversimui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -57,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -69,8 +69,7 @@
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-31T17:12:49.754Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -82,26 +81,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\Program.cs",
               "RelativeDocumentMoniker": "..\\Connections\\ConnectionCore\\Program.cs",
               "ToolTip": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\Program.cs",
               "RelativeToolTip": "..\\Connections\\ConnectionCore\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA3wAwAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T00:18:13.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ClientCore.cs",
               "DocumentMoniker": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ClientCore.cs",
               "RelativeDocumentMoniker": "..\\Connections\\ConnectionCore\\ClientCore.cs",
               "ToolTip": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ClientCore.cs",
               "RelativeToolTip": "..\\Connections\\ConnectionCore\\ClientCore.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAQwGEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAswGAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T00:20:04.321Z",
               "EditorCaption": ""
@@ -114,20 +113,20 @@
               "RelativeDocumentMoniker": "..\\Connections\\ConnectionCore\\ServerCore.cs",
               "ToolTip": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ServerCore.cs",
               "RelativeToolTip": "..\\Connections\\ConnectionCore\\ServerCore.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAADwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAQwLcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T00:17:51.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\Views\\ServerView\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ServerView\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\Views\\ServerView\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\ServerView\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAIAxwHoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAA0wIYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T16:52:46.188Z",
               "EditorCaption": ""
@@ -156,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DiscordServerSimUI.csproj",
               "DocumentMoniker": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\DiscordServerSimUI.csproj",
               "RelativeDocumentMoniker": "DiscordServerSimUI.csproj",
@@ -164,8 +163,7 @@
               "RelativeToolTip": "DiscordServerSimUI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-05T00:17:54.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-05T00:17:54.715Z"
             },
             {
               "$type": "Document",
@@ -181,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginScreen.xaml.cs",
               "DocumentMoniker": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\DiscordServerSimUI\\Views\\LoginView\\LoginScreen.xaml.cs",
               "RelativeDocumentMoniker": "Views\\LoginView\\LoginScreen.xaml.cs",
@@ -189,8 +187,7 @@
               "RelativeToolTip": "Views\\LoginView\\LoginScreen.xaml.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAmwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T17:09:23.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T17:09:23.195Z"
             },
             {
               "$type": "Document",

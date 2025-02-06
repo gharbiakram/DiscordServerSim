@@ -91,7 +91,7 @@ namespace ConnectionCore
            
         }
 
-        public async Task RecieveResponseAsync()
+        public async Task<string> RecieveResponseAsync()
         {
 
             var stream = _tcpClient.GetStream();
@@ -103,7 +103,19 @@ namespace ConnectionCore
             {
                 string response = Encoding.UTF8.GetString(messageBytes, 0, readBytes);
                 Console.WriteLine($"(client): Server responded with: {response}");
+
+                return response;
             }
+            else
+            {
+                        
+                
+                throw new Exception();
+
+
+
+            }
+
 
         }
 
