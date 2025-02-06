@@ -8,9 +8,9 @@
 
             new ServerCore(); // this program will run independatly of the UI app
 
-           
 
-       
+
+            await Task.Delay(-1);
 
 
             

@@ -38,10 +38,7 @@ namespace ConnectionCore
 
       
 
-                _tcpClient.Close();
-
-
-                Console.WriteLine("(client) : Connection Terminated by the Client");
+                
 
 
             }catch(Exception e)
@@ -63,6 +60,9 @@ namespace ConnectionCore
             try {
 
                 if (!_tcpClient.Connected) { return false; }
+
+                Console
+                    .WriteLine("Sending The Message To the server");
 
                 messageByte = Encoding.UTF8.GetBytes(message, 0, message.Length);
 

@@ -1,0 +1,15 @@
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net9.0-windows\ConnectionCore.exe
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net9.0-windows\ConnectionCore.deps.json
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net9.0-windows\ConnectionCore.runtimeconfig.json
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net9.0-windows\ConnectionCore.dll
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\bin\Debug\net9.0-windows\ConnectionCore.pdb
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.AssemblyInfoInputs.cache
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.AssemblyInfo.cs
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.csproj.CoreCompileInputs.cache
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.sourcelink.json
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.dll
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\refint\ConnectionCore.dll
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.pdb
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ConnectionCore.genruntimeconfig.cache
+C:\Users\akram\Desktop\Projects\DiscordServerSim\Connections\ConnectionCore\obj\Debug\net9.0-windows\ref\ConnectionCore.dll

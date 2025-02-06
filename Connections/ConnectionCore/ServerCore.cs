@@ -50,6 +50,8 @@ namespace ConnectionCore
 
                      TcpClient client = await _tcpListener.AcceptTcpClientAsync();
 
+                    Console.WriteLine("CLient Connected");
+
                     connectedClients[client] = DateTime.UtcNow;
 
                    _ =Task.Run( ()=>   HandleClientAsync(client) );
@@ -129,6 +131,9 @@ namespace ConnectionCore
 
 
                     string message = Encoding.UTF8.GetString(buffer, 0, readBytes);
+
+
+                    Console.WriteLine(message);
 
 
 

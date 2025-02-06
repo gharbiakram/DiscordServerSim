@@ -53,30 +53,40 @@ namespace DiscordServerSimUI.Views.ServerView
             {
 
                 //client sends message here
-                
+
                 //Make a way so that the userID will also be included (for DB) purpose
 
-                await client.SendMessageAsync(sentMessage); // will return T or F dep on result
+                await client.SendMessageAsync(sentMessage).ContinueWith(task =>
+                {
+                    if (task.IsCompletedSuccessfully)
+                    {
+                        // Ensure UI updates are on the main thread (if applicable)
+                        App.Current.Dispatcher.Invoke(() =>
+                        {
+                            Messages.Add(new Message { Sender = new User("User"), messageText = sentMessage });
+                        });
+                    }
+                });
 
-                
 
 
-               // Messages.Add(new Message { messageText = MessageBox.Text, Sender = new User("Akram") });
+
+                // Messages.Add(new Message { messageText = MessageBox.Text, Sender = new User("Akram") });
 
 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
+
+
+
+
+
+
+
                 MessageBox.Clear();
                 ScrollToBottom();
 

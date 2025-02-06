@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DiscordServerSimUI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\Connections\\ConnectionCore\\ConnectionCore.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

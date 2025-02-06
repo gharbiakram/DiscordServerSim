@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "DiscordServerSimUI/1.0.0": {
+        "dependencies": {
+          "ConnectionCore": "1.0.0"
+        },
+        "runtime": {
+          "DiscordServerSimUI.dll": {}
+        }
+      },
+      "ConnectionCore/1.0.0": {
+        "runtime": {
+          "ConnectionCore.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DiscordServerSimUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConnectionCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
