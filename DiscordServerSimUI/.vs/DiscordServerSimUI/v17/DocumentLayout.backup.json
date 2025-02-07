@@ -87,7 +87,7 @@
               "RelativeDocumentMoniker": "..\\Connections\\ConnectionCore\\ClientCore.cs",
               "ToolTip": "C:\\Users\\akram\\Desktop\\Projects\\DiscordServerSim\\Connections\\ConnectionCore\\ClientCore.cs",
               "RelativeToolTip": "..\\Connections\\ConnectionCore\\ClientCore.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAADgv2sAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T00:20:04.321Z",
               "EditorCaption": ""
@@ -137,8 +137,7 @@
               "RelativeToolTip": "Views\\LoginView\\LoginScreen.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T17:09:23.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T17:09:23.195Z"
             },
             {
               "$type": "Document",
@@ -150,8 +149,7 @@
               "RelativeToolTip": "..\\Connections\\ConnectionCore\\ServerCore.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAkwDcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T00:17:51.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-05T00:17:51.118Z"
             },
             {
               "$type": "Document",

@@ -1,0 +1,52 @@
+1. ConnectionCore (Class Library Project):
+
+This project contains the core logic for handling network connections and communication. It has two main classes: ClientCore and ServerCore.
+
+    ClientCore:
+        Manages the client-side connection to the server.
+        ConnectToServer(): Establishes a TCP connection to the server at the specified IP address and port. It sends the client's name to the server upon connection.
+        SendMessageAsync(): Sends a message to the server. It prepends the client's name to the message before sending.
+        RecieveResponseAsync(): Asynchronously receives a message from the server.
+
+    ServerCore:
+        Manages the server-side logic, listening for incoming client connections.
+        InitialzeServerAsync(): Starts the TCP listener on the specified IP address and port. It accepts incoming client connections asynchronously. It uses a ConcurrentDictionary to store connected clients and their names, which is thread-safe for concurrent access. It then spawns a new task to handle each client connection.
+        HandleClientAsync(): Handles communication with a single client. It reads messages from the client's stream, extracts the sender's name and message text, broadcasts the message to all other connected clients, and continues to listen for new messages from that client.
+        BroadCastMessageAsync(): Sends a message to all connected clients except the sender.
+
+2. DiscordServerSimUI (WPF Application Project):
+
+This project provides the user interface for the chat application. It uses WPF (Windows Presentation Foundation) for the UI elements.
+
+    MainWindow:
+        The main window of the application.
+        username: Stores the username of the current client, obtained via a popup input box.
+        client: An instance of the ClientCore class, used to communicate with the server.
+        Messages: An ObservableCollection<Message> that stores the chat messages. The UI is bound to this collection, so any changes to it are automatically reflected in the UI.
+        MainWindow(): Constructor that initializes the UI, the ClientCore, and sets up data binding for the message list. It prompts the user for a username.
+        MessageBox_KeyDown() and SendingButton_Click(): Event handlers for sending messages. They call the SendMessage() method when the Enter key is pressed or the Send button is clicked.
+        SendMessage(): Sends the message entered in the text box to the server using the ClientCore instance. It then adds the message to the Messages collection to display it in the chat window.
+        ScrollToBottom(): Scrolls the message list to the bottom to show the latest messages.
+        RecieveMessageAsync(): Continuously listens for incoming messages from the server using the ClientCore instance. When a message is received, it's added to the Messages collection.
+        User class: Represents a user in the chat with a Username property.
+        Message class: Represents a chat message with a Sender (User object) and messageText property.
+
+Overall Flow:
+
+    The server application (ConnectionCore project) is started. It listens for incoming connections.
+    The client application (DiscordServerSimUI project) is started. It prompts the user for a username.
+    The client connects to the server. The client's username is sent to the server.
+    The server accepts the client connection and adds the client to its list of connected clients.
+    When a client sends a message, it's sent to the server.
+    The server receives the message and broadcasts it to all other connected clients.
+    Each client receives the broadcast message and adds it to its message list, updating the UI.
+
+Key Concepts:
+
+    TCP Sockets: The application uses TCP sockets for communication, which provides a reliable, ordered stream of data between the client and server.
+    Asynchronous Programming: The code uses async and await keywords for asynchronous operations, which prevents the UI from blocking while waiting for network operations to complete. This is crucial for responsiveness.
+    Data Binding: The WPF application uses data binding to connect the UI elements (like the message list) to the data (the Messages collection). This simplifies UI updates.
+    ConcurrentDictionary: The server uses a ConcurrentDictionary to store connected clients. This collection is thread-safe, allowing multiple clients to connect and send messages concurrently without data corruption.
+    Broadcasting: The server broadcasts messages to all connected clients, ensuring that everyone receives the chat messages.
+
+This architecture provides a basic but functional chat application.  It demonstrates fundamental networking concepts, asynchronous programming, and UI data binding.
